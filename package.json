@@ -1,0 +1,32 @@
+{
+  "name": "n5hl.cf",
+  "version": "1.0.0",
+  "description": "n5hl URL Shortner",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N05h3ll/n5hl.git"
+  },
+  "author": "Mohamed Ashraf",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/N05h3ll/n5hl/issues"
+  },
+  "homepage": "https://github.com/N05h3ll/n5hl#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "monk": "^7.3.0",
+    "randomstring": "^1.1.5",
+    "yup": "^0.29.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
