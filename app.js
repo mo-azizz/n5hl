@@ -21,7 +21,7 @@ let shortcuts= db.get('shortcuts');
 shortcuts.createIndex({extension:1},{unique: true});
 let schema = yup.object().shape({
     url: yup.string().trim().url().required(),
-    extension: yup.string().trim().matches( /^[a-zA-Z0-9]$/),
+    extension: yup.string().trim().matches( /^[a-zA-Z0-9]+$/),
 });
 let error;
 let complete;
