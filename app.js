@@ -7,7 +7,7 @@ app.use(helmet());
 app.use(express.static('public'));
 const fs = require('fs');
 const monk = require('monk');
-const db = monk(process.env.MONGO_URI)
+const db = monk(process.env.MONGODB_URI);
 const bodyParser = require('body-parser');
 const yup = require('yup');
 const morgan = require('morgan');
