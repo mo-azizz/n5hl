@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const randomString = require('randomstring');
 const express = require('express');
 const helmet = require('helmet');
@@ -69,7 +69,7 @@ app.get('/:extension', async (req,res) => {
     let extension = req.params.extension;
     let existing = await shortcuts.findOne({extension});
     if (existing){res.redirect(existing.url)}else{
-       res.send("NOT FOUND");
+       res.render('404')
     }
 });
 app.use((error, req, res, next) => {
