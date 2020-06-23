@@ -1,4 +1,4 @@
-require ('dotenv').config();
+
 const randomString = require('randomstring');
 const express = require('express');
 const helmet = require('helmet');
