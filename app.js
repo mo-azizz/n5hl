@@ -55,7 +55,7 @@ app.post('/addNewUrl', async(req,res) =>{
     let complete = await shortcuts.insert(newShortCut);
     res.render('index', {complete : complete.extension,error});
 }catch (error){
-    console.log(error)
+    
     if (error.toString().includes('match')) error = 'ValidationError: extension must only contain alphabetical characters a-z A-Z or numbers 0-9';
  res.render('index', {complete,error})
 }
@@ -69,7 +69,7 @@ app.get('/:extension', async (req,res) => {
     let extension = req.params.extension;
     let existing = await shortcuts.findOne({extension});
     if (existing){res.redirect(existing.url)}else{
-        error = 'ALREADY EXISTING'
+       res.send("NOT FOUND");
     }
 });
 app.use((error, req, res, next) => {
